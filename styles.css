@@ -1,21 +1,28 @@
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:"poppins",sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
-body{
-    background-color: #c9d6ff;
-    background:linear-gradient(to right,#e2e2e2,#c9d6ff);
+
+    body {
+    background-color: #b4d6e9; 
+    background-image: url('your-vintage-pattern.jpg'); 
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
-.container{
-    background:#fff;
-    width:450px;
-    padding:1.5rem;
-    margin:50px auto;
-    border-radius:10px;
-    box-shadow:0 20px 35px rgba(0,0,1,0.9);
+
+.container {
+    background: #fff;
+    width: 450px;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 1, 0.9);
 }
+
 form{
     margin:0 2rem;
 }
@@ -86,13 +93,13 @@ button{
     outline:none;
     border:none;
     width:100%;
-    background:rgb(125,125,235);
+    background:#ee6d31;
     color:white;
     cursor:pointer;
     transition:0.9s;
 }
 button:hover{
-    background:#07001f;
+    background:#f03a22;
 }
 .or{
     font-size:1.1rem;
@@ -125,7 +132,7 @@ button:hover{
     font-weight:bold;
 }
  #signUpButton, #signInButton{
-    color:rgb(125,125,235);
+    color:#ee6d31;
     border:none;
     background-color:transparent;
     font-size:1rem;
@@ -133,7 +140,7 @@ button:hover{
 }
 #signUpButton:hover, #signInButton:hover {
     text-decoration:underline;
-    color:blue;
+    color:#f03a22;
 } 
 .messageDiv{
     background-color:hsl(327,90%,28%);
@@ -146,28 +153,3 @@ button:hover{
     animation:fadeOut 7s forwards;
 
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-
-body {
-    background-color: #c9d6ff;
-    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-.container {
-    background: #fff;
-    width: 450px;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 20px 35px rgba(0, 0, 1, 0.9);
-}
-
-/* ... rest of your CSS ... */

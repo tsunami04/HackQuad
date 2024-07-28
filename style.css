@@ -424,10 +424,10 @@ body {
     border-radius: 3px;
 }
 .top {
-    padding-top: 50px; /* add a 50px padding top */
+    padding-top: 50px; 
   }
   .top {
-    margin-top: 10px; /* add a 50px padding top */
+    margin-top: 10px; 
   }
   .navbar {
     background-color: #333;
@@ -489,6 +489,6 @@ body {
 }
 
 .logo img {
-    width: 50px; /* adjust the width to your logo size */
+    width: 50px; 
     height: auto;
 }

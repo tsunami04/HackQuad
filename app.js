@@ -207,7 +207,6 @@ function getFoodRecommendations(budget, latitude, longitude) {
 }
 //budgetcontroller
 BudgetController = (function () {
-    //some code
     var expense = function (id, description, value) {
       this.id = id;
       this.description = description;
@@ -248,8 +247,6 @@ BudgetController = (function () {
       budget: 0,
       percentage: -1,
     };
-
-  
     return {
       addItem: function (type, des, val) {
         var ID, newitem;
@@ -276,7 +273,6 @@ BudgetController = (function () {
           data.allitems[type].splice(index, 1);
         }
       },
-      
       calculatebudget: function () {
         calculatetotal("exp");
         calculatetotal("inc");
@@ -312,10 +308,8 @@ BudgetController = (function () {
       },
     };
   })();
-  
   //UIcontroller
   UIController = (function () {
-    //write code
     var DOMstrings = {
       inputtype: ".add__type",
       inputdescription: ".add__description",
@@ -343,15 +337,11 @@ BudgetController = (function () {
                 '<p>Distance: ' + restaurant.distance + '</p>' +
                 '<p>Address: ' + restaurant.address + '</p>' +
                 '<p>Recommended: ' + restaurant.recommendedFood + '</p>' +
-
-
                 '</div>';
         });
         html += '</div>';
-
         document.querySelector('.restaurant-recommendations').innerHTML = html;
     };
-
     return {
       getInput: function () {
         return {
@@ -376,7 +366,6 @@ BudgetController = (function () {
           html =
             '<div class="item clearfix" id="exp-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">Rs %value%</div><div class="item__percentage">21%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
         }
-        
         //2.replace placeholder with actual data
         newHTML = html.replace("%id%", obj.id);
         newHTML = newHTML.replace("%description%", obj.description);
@@ -399,7 +388,6 @@ BudgetController = (function () {
         document.querySelector(DOMstrings.budgetlabel).textContent = `Rs ${obj.budget}`;
         document.querySelector(DOMstrings.incomelabel).textContent = `Rs ${obj.totalinc}`;
         document.querySelector(DOMstrings.expenselabel).textContent = `Rs ${obj.totalexp}`;
-
         document.querySelector(
           DOMstrings.budgetlabel
         ).textContent = `Rs ${obj.budget}`;
@@ -462,11 +450,8 @@ BudgetController = (function () {
       },
     };
   })();
-  
-  //controller
  //controller
 controller = (function (budgetcntrl, uicntrl) {
-  //write code
   var setupeventlisterner = function () {
     var DOM = uicntrl.getdomstrings();
     document
@@ -504,11 +489,10 @@ controller = (function (budgetcntrl, uicntrl) {
     budgetcntrl.calculatebudget();
     var budget = budgetcntrl.getbudget();
     uicntrl.updatebudgetUI(budget);
-    updateRestaurantRecommendations(); // Add this line
+    updateRestaurantRecommendations(); 
   };
 
   var updatepercentages = function () {
-    // body...
     budgetcntrl.calculatepercentages();
     var p = budgetcntrl.getpercentagesfun();
     uicntrl.displaypercentages(p);
@@ -567,11 +551,8 @@ controller = (function (budgetcntrl, uicntrl) {
         percentage: -1,
       });
       setupeventlisterner();
-      updateRestaurantRecommendations(); // Add this line
+      updateRestaurantRecommendations();
     },
   };
 })(BudgetController, UIController);
-
 controller.init();
-  
- 
